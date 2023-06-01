@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './ContactForm.module.css';
 
 const ContactForm = ({ addContact }) => {
@@ -57,6 +58,10 @@ const ContactForm = ({ addContact }) => {
       </form>
     </div>
   );
+};
+
+ContactForm.propTypes = {
+  addContact: PropTypes.func.isRequired,
 };
 
 export default ContactForm;
